@@ -19,16 +19,16 @@ export default class Ship implements GameObject {
         this.height = this.image.clientHeight;
     }
 
-    public SetXPos(posX: number) {
+    // public SetXPos(posX: number) {
 
-    }
+    // }
 
-    public SetYPos(posY: number) {
+    // public SetYPos(posY: number) {
 
-    }
+    // }
 
-    public Move(direction: number) {
+    // public Move(direction: number) {
 
-    }
+    // }
 }
 

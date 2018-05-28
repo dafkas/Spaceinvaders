@@ -9,13 +9,16 @@ export default class Alien implements GameObject {
     public width: number = 0;
     public height: number = 0;
 
+    //only used in alien so private #
+    private playKillSound: Sound;
+
     public static Direction = { Left: 1, Right: 2 };
 
     public currentDirection: number = Alien.Direction.Right;
 
     public active: boolean = false;
-    private explosionImage: HTMLImageElement;
-    private explosionIndex: number;
+    // private explosionImage: HTMLImageElement;
+    // private explosionIndex: number;
 
     private viewPort: HTMLElement;
 
@@ -31,13 +34,13 @@ export default class Alien implements GameObject {
         this.explosionImageURLs = explosionImageURLs;
     }
 
-    public SetXPos(posX: number) {
+    // public SetXPos(posX: number) {
 
-    }
+    // }
 
-    public SetYPos(posY: number) {
+    // public SetYPos(posY: number) {
 
-    }
+    // }
 
     public Move() {
 
@@ -54,7 +57,8 @@ export default class Alien implements GameObject {
     public Kill() {
         this.image.style.visibility = 'hidden';
         this.active = false;
-
+        this.playKillSound = new Audio('../assets/sounds/hit.mp3')
+        this.playKillSound.play();
 
     }
 }

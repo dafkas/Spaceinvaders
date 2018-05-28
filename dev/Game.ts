@@ -18,10 +18,20 @@ export default class Game {
     private lblScore: HTMLLabelElement = null;
     private score: number = 0;
 
+    //private only used in gameobject
+    private playMusic: Sound;
+
     constructor(viewPortElementId: string) {
         this.viewPort = <HTMLDivElement>document.getElementById(viewPortElementId);
         this.InitiateBattlefield();
         this.InitiateEvents();
+
+        //play music sound
+        this.playMusic = new Audio('../assets/sounds/music.mp3');
+        this.playMusic.play();
+
+        //play kill sound
+        playKillSound.
     }
 
     private InitiateBattlefield() {
